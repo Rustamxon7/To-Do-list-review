@@ -38,7 +38,6 @@ const showList = (tasksList) => {
     descriptionContainer.appendChild(description);
     descriptionContainer.appendChild(editDescription);
     task.className = 'task';
-    task.setAttribute('draggable', 'true');
     task.appendChild(descriptionContainer);
     task.appendChild(remove);
     task.appendChild(edit);
@@ -104,20 +103,6 @@ const removeCompletedTasks = (tasks) => {
   return tasks;
 };
 
-const updateAfterDrag = (container) => {
-  const listOfElements = container.children;
-  const tasks = getStorage();
-  const orderedTasks = [];
-  Array.from(listOfElements).forEach((element) => {
-    const id = parseInt(element.id, 10);
-    const index = tasks.findIndex((task) => task.index === id);
-    orderedTasks.push(tasks[index]);
-  });
-  orderTasks(orderedTasks);
-  updateStorage(orderedTasks);
-  showList(orderedTasks);
-};
-
 let tasks = getStorage();
 
 showList(tasks);
@@ -167,9 +152,4 @@ addTaskButton.addEventListener('click', () => {
   addTask(tasks);
   updateStorage(tasks);
   showList(tasks);
-});
-
-listDiv.addEventListener('dragend', (event) => {
-  updateAfterDrag(listDiv);
-  event.stopPropagation();
 });
