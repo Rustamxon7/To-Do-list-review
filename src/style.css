@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffebee;
+}
+
+i {
+  cursor: pointer;
+}
+
+.list-container {
+  height: 40rem;
+  width: 60rem;
+  background-color: #ff3b53;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  border-radius: 1.2rem;
+  box-shadow: 1rem 1rem 5rem #ff3b5252;
+}
+
+.title {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 20px 0 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.fas {
+  color: white;
+}
+
+.fa-sync-alt {
+  font-size: 1.6rem;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.add input {
+  background-color: transparent;
+  border: none;
+  margin-left: 20px;
+  width: 80%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 3px solid transparent;
+}
+
+.add input::placeholder {
+  color: white;
+  text-transform: uppercase;
+}
+
+.add #add {
+  margin-right: 20px;
+  font-size: 1.2em;
+  border: none;
+  background-color: transparent;
+}
+
+.add input:focus {
+  color: white;
+  outline: none;
+  border-bottom: 3px solid #ffb1ba;
+}
+
+.clear {
+  cursor: pointer;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #fffbfb;
+}
+
+.clear p {
+  color: #ff3b53;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.d-none {
+  display: none;
+}
+
+.list {
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  height: 77%;
+  padding-left: 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  list-style: none;
+  margin: 1.2rem;
+  background-color: #e6354b;
+  border-radius: 0.6rem;
+}
+
+.description-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 5rem;
+  width: 90%;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.description-container p {
+  color: white;
+  margin: 10px 5px;
+  width: 90%;
+  font-size: 1.5rem;
+}
+
+.check {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #fff;
+  margin-right: 10px;
+}
+
+.edit-description {
+  color: #fff;
+  background-color: #cc2f41;
+  height: 50%;
+  margin: 10px 5px;
+  width: 90%;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+}
+
+.fa-trash {
+  padding: 10px;
+  font-size: 1.3rem;
+  margin-right: 15px;
+}
+
+.fa-check {
+  font-size: 1.6rem;
+}
+
+.fa-edit {
+  padding: 10px;
+  font-size: 1.3rem;
+  margin-right: 15px;
+}
+
+.dragging {
+  background-color: #0fabbd;
+}
